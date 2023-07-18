@@ -39,22 +39,28 @@
         font-size: 3.5rem;
       }
     }
+
+    .container {
+      margin-top: 5rem;
+    }
   </style>
   <!-- Custom styles for this template -->
   <link href="jumbotron.css" rel="stylesheet">
 </head>
 
 <body>
-  <?= $this->include('layouts/navbar.php') ?>
-  <?= $this->renderSection('content') ?>
+  <?= $this->include('navbar.php') ?>
+  <main role="main" class="container">
+    <?= $this->renderSection('content') ?>
 
-  <footer class="container">
-    <p>© Company 2017-2020</p>
-  </footer>
-  <script src="<?= base_url('jquery-3.7.0.min.js') ?>"></script>
-  <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-  <script src="<?= base_url('js/bootstrap.min.js') ?>"></script>
-
+    <footer class=" container">
+      <p>© Company 2023</p>
+    </footer>
+    <script src="<?= base_url('jquery-3.7.0.min.js') ?>"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="<?= base_url('js/bootstrap.min.js') ?>"></script>
+    <?= $this->renderSection('script') ?>
+  </main>
 </body>
 
 </html>

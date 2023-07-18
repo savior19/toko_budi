@@ -47,3 +47,11 @@ $routes->get('/', 'Home::index');
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
     require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
+
+// $routes->group('auth', function ($routes) {
+//     $routes->get('register', 'Auth::register');
+//     $routes->get('register', 'Auth::register');
+//     $routes->get('login', 'Auth::login');
+
+// });
+$routes->setAutoRoute(true);
